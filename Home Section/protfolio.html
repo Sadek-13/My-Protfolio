@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--title icon-->
+    <link rel="shortcut icon" type="x-icon" href="images/house.png">
+
+    <!--FONT-AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--main CSS-->
+    <link rel="stylesheet" href="protfolio.css">
+    <title>Home</title>
+</head>
+<body>
+    <!-- Header section -->
+
+    <header class="header">
+        <a href="#" class="logo">SADEK.</a>
+
+        <i class="fa-solid fa-bars" id="menu_icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active-H">Home</a>
+            <a href="http://127.0.0.1:5500/Curriculum%20Vitae/curriculum_vitae.html">Curriculum Vitae</a>
+            <a href="http://127.0.0.1:5500/Research%20&%20Publication/research.html">Research & Publication</a>
+            <a href="http://127.0.0.1:5500/Project/project.html">Project</a>
+            <a href="http://127.0.0.1:5500/Certificates%20&%20Achivements/certificates.html">Certificates & Rewards</a>
+            <a href="http://127.0.0.1:5500/Contact/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!--<div class="cursor"></div>-->
+    <!--Home Section-->
+
+
+
+    <section class="home" id="home">
+        <div class="home_content">
+            <h3>As-salamu Alaykum Warahmatullahi Wabarakatuh, Myself</h3>
+            <h1>Golam Sadek</h1>
+            <h3>And I am <span class="multiple-text"></span></h3>
+            <p> Welcome to my website! I'm delighted you're here. I am an alumnus of the illustrious <b>Chittagong University of Engineering and 
+                Technology (CUET)</b> with a foundational education in <b>Mechatronics and Industrial Engineering</b>, and my major field 
+                of study was <b>Robot Operating System(ROS)</b>. My academic experiences have been a consistent journey of discovery and improvement. I am curious 
+                about <b>Robotics, IoT, Industrial Automation, PLC, Control</b>. Besides, as my undergraduate research field was <b>Autonomous 
+                navigation control</b>, it further fuels my desire to contribute to cutting-edge advancements in connected Autonomous navigation
+                control system and robotics. I'm proficient in MATLAB, Python, C,C++,Machine Learning,Deep Learning,Html, CSS,Javascript, Proteus,Solidworks, TIA portal.
+                Currently, I am looking for a great research lab to work in to pursue my higher education with funded  masters and PhD opportunities.Outside 
+                of my academic pursuits, I like to play sports and participate on extra curricular activities. <br><br>
+                
+                I appreciate your visit and look forward to connecting with people who share my interests and vision. <br><br>
+                
+                
+                Warm regards, Golam Sadek!
+            </p>
+            <a href="https://drive.google.com/uc?export=download&id=1RzoJT7owY8gPiYqjRF0DzBbgXAhgbeY7" target="_blank" class="btn">Download CV <i class="fa-solid fa-download"></i></a>
+       </div>
+       <div class="home_image">
+            <img src="images/my_home_img.png" alt="Sadek's Photo">
+       </div>
+    </section>
+    
+    
+    <!--Main js-->
+    <script src="protfolio.js"></script>
+
+    <!--typed js-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>const typed = new Typed('.multiple-text', {
+        strings: ['an Engineer', 'a Researcher','a Mentor'],
+        typeSpeed: 60,
+        backSpeed: 60,
+        backDelay: 1000,
+        loop: true,
+      });</script>
+
+      <!--Cursor js-->
+    <script>
+        const cursor = document.querySelector(".cursor");
+        var timeout;
+
+        //follow cursor on mousemove
+        document.addEventListener("mousemove", (e) => {
+            let x = e.pageX;
+            let y = e.pageY;
+
+            cursor.style.top = y + "px";
+            cursor.style.left = x + "px";
+            cursor.style.display = "block";
+
+            //cursor effects on mouse stopped
+            function mouseStopped(){
+                cursor.style.display = "none";
+            }
+            clearTimeout(timeout);
+            timeout = setTimeout(mouseStopped, 1000);
+        });
+        //cursor effects on mouseout
+        document.addEventListener("mouseout", () => {
+            cursor.style.display = "none";
+        })
+     </script>
+
+</body>
+
+<footer>
+    <p>COPYRIGHT © 2024  <b>Golam Sadek</b>  |  ALL RIGHTS RESERVED</p>
+</footer>
+
+</html>

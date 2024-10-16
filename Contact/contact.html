@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--title icon-->
+    <link rel="shortcut icon" type="x-icon" href="images/contacts.png">
+
+    <!--FONT-AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--main CSS-->
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
+
+    <!--Cursor Design-->
+    <div class="cursor"></div>
+    
+</head>
+<body>
+    <!-- Header section -->
+
+    <header class="header">
+        <a href="#" class="logo">SADEK.</a>
+
+        <nav class="navbar">
+            <a href="http://127.0.0.1:5500/Home%20Section/protfolio.html" >Home</a>
+            <a href="http://127.0.0.1:5500/Curriculum%20Vitae/curriculum_vitae.html">Curriculum Vitae</a>
+            <a href="http://127.0.0.1:5500/Research%20&%20Publication/research.html">Research & Publication</a>
+            <a href="http://127.0.0.1:5500/Project/project.html">Project</a>
+            <a href="http://127.0.0.1:5500/Certificates%20&%20Achivements/certificates.html">Certificates & Achivements</a>
+            <a href="#contact"class="active-C">Contact</a>
+        </nav>
+    </header>
+
+    
+    
+    <section class="main" id="main">
+
+        <!--Contact Form section-->
+
+        <div class="contact_form">
+            <h2>Contact Me!</h2>
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Full Name" id="name"
+                        class="item" autocomplete="off">
+                        <div class="error-text">Full Name can't be blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Email Address" id="email"
+                        class="item" autocomplete="off">
+                        <div class="error-text">Email Address can't be blank</div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field field">
+                        <input type="text" placeholder="Phone Number" id="phone"
+                        class="item" autocomplete="off">
+                        <div class="error-text">Phone Number can't be blank</div>
+                    </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Subject" id="subject"
+                        class="item" autocomplete="off">
+                        <div class="error-text">subject can't be blank</div>
+                    </div>
+                </div>
+
+                <div class="textarea-field field">
+                    <textarea name="" id="message"cols='30'rows='10'placeholder="Your message"class="item"autocomplete="off"></textarea>
+                    <div class="error-text">Message can't be blank</div>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!--Contact Information Section-->
+
+        <div class="contact_information">
+            <div class="information">
+                <div class="icon"><i class="fa-solid fa-location-dot fa-beat"></i>   Address</div>
+                <p>Pahartoli,Raozan-4349,<br>Chittagong, Bangladesh</p>
+            
+                <div class="icon"><i class="fa-solid fa-phone fa-shake"></i>  Phone</div>
+                <p>+8801912683685<br>+8801884974197</p>
+            
+                <div class="icon"><i class="fa-solid fa-envelope fa-bounce"></i>  Email</div>
+                <p>golamsadek1913@gmail.com</p>
+                
+                <div class="connect_text"><i class="fa-solid fa-paperclip"></i>  Connect with Me</div>
+
+                <div class="social_media">
+                    <a href="https://www.facebook.com/sadek286" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"target="_blank"></i></a>
+                    <a href="https://www.linkedin.com/in/golam-sadek-8519b2214/"target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/golam__sadek/?hl=en"target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Cursor js-->
+    <script>
+        const cursor = document.querySelector(".cursor");
+        var timeout;
+
+        //follow cursor on mousemove
+        document.addEventListener("mousemove", (e) => {
+            let x = e.pageX;
+            let y = e.pageY;
+
+            cursor.style.top = y + "px";
+            cursor.style.left = x + "px";
+            cursor.style.display = "block";
+
+            //cursor effects on mouse stopped
+            function mouseStopped(){
+                cursor.style.display = "none";
+            }
+            clearTimeout(timeout);
+            timeout = setTimeout(mouseStopped, 1000);
+        });
+        //cursor effects on mouseout
+        document.addEventListener("mouseout", () => {
+            cursor.style.display = "none";
+        })
+     </script>
+     
+    <!--Smtp.js-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+     <!--Main js-->
+     <script src="contact.js"></script>
+    
+</body>
+<footer>
+    <p>COPYRIGHT © 2024  <b>Golam Sadek</b>  |  ALL RIGHTS RESERVED</p>
+</footer>
+</html>
